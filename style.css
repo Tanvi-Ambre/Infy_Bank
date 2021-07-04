@@ -1,7 +1,104 @@
 .text-center{
     text-align: center;
-}
-.horizontal-center{
-    /* display: flex; */
+    width: fit-content;
     justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-top: 10px;
+    border-top: 5px solid #800080;
+    border-bottom: 5px solid #800080;
+    color: #800080;
+}
+ .horizontal-center{
+    border: 5px solid purple;
+    padding: 10px;
+    margin: 30px 80px;
+} 
+body{
+    border: 3px solid black;
+   background-color: #fce9fc;
+   margin: 30px 250px;
+}
+
+label{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+input{
+    border: none;
+    padding: 5px 10px;
+    width: 200px
+}
+#login-id{
+    margin-left: 20px;
+}
+#login-pass{
+    margin-left: 160px;
+}
+
+.footer{
+    justify-content: center;
+    display: flex;
+   }
+
+button{
+    margin-right: 5px;
+    background-color: purple;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+section{
+    border: 1px solid red ;
+    width: 250px;
+    background-color: purple;
+}
+
+main{
+    border: 1px solid blue;
+    position: relative;
+}
+
+header{
+    border: 1px solid red ;
+    
+}
+
+article{
+    border: 1px solid red ;
+    position: absolute;
+    color: tomato;
+    font-weight: bold;
+}
+
+header,section,article{
+    align-self: flex-start;
+}
+
+a, p{
+    color: whitesmoke;
+    text-decoration: none;
+    padding-left: 10px;
+    
+}
+
+li{
+    padding: 10px;
+}
+a{
+    text-transform: uppercase;
+}
+
+article div::before {
+    content: "***";
+    color: red;
+}
+article div::after {
+    content: "***";
+    color: red;
+}
+
+ul{
+    list-style-type: none;
 }

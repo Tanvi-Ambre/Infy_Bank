@@ -126,7 +126,7 @@
                     <input type="password" id = "login-pass" name = "login_pass" placeholder = "Enter password" required>
                 </div>
                 <br>
-                <div>
+                <div class="footer">
                     <button type="submit" id = "btn-login" name = "btn_login">Login</button>
                     <button type="reset" id = "btn-reset" name = "btn_reset">Reset</button>
                 </div>
