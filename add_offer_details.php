@@ -88,23 +88,28 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>
-            <h1 class = "text-center">
-                <?php echo $app_name; ?>
-            </h1>
-
+    <main>
+        <section>
             <p>Hi Admin!</p>
             <br>
 
             <div>
                 <?php include "sidebar.php"; ?>
             </div>
+            </section>
+        <section class="offer">
+            <header>
+            <h1 class = "text-center">
+                <?php echo $app_name; ?>
+            </h1>
+            </header>
+            <br><br><br>
 
-            <div>
-                <h3>Fill the details to add new offers</h3>
-
-                <form action="" method="POST">
-                    <div>
+            
+                <h3  class="text-left">Fill the details to add new offers</h3>
+                <article id="branch">
+                <form action="" method="POST" id="branch_form">
+                    <div class="horizontal-center">
                         <label for = "offer-name">Offer Name</label>
                         <input type="text" id = "offer-name" name = "offer_name" placeholder = "Enter offer name" required>
                         <br><br>
@@ -114,13 +119,13 @@
                         <br><br>
                     </div>
                     <br>
-                    <div>
+                    <div class="barnch_footer">
                         <button type="submit" id = "btn-add" name = "btn_add">Add</button>
                         <button type="reset" id = "btn-reset" name = "btn_reset">Reset</button>
                     </div>
                 </form>
             </div>
-            <div>
+            <div class = "error">
                 <?php if(!empty($error_messages)): ?>
                     <?php foreach($error_messages as $message): ?>
                         <div>

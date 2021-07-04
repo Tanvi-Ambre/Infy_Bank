@@ -1,9 +1,7 @@
-.text-center{
+.text-center,.text-left{
     text-align: center;
     width: fit-content;
-    justify-content: center;
     margin: auto;
-    margin-top: 10px;
     margin-top: 10px;
     border-top: 5px solid #800080;
     border-bottom: 5px solid #800080;
@@ -18,11 +16,13 @@ body{
     border: 3px solid black;
    background-color: #fce9fc;
    margin: 30px 250px;
+   height: fit-content;
 }
 
 label{
     font-weight: bold;
     font-size: 20px;
+    color: black;
     
 }
 input{
@@ -30,8 +30,20 @@ input{
     padding: 5px 10px;
     width: 200px
 }
-#login-id{
+#login-id, #branch-manager{
     margin-left: 20px;
+}
+#branch-name  {
+    margin-left: 50px;
+}
+#card-name{
+    margin-left: 70px;
+}
+#branch-address, #card-min-limit, #offer-name{
+    margin-left: 30px;
+}
+#card-max-limit, #offer-details{
+    margin-left: 25px;
 }
 #login-pass{
     margin-left: 160px;
@@ -50,30 +62,20 @@ button{
 }
 
 section{
-    border: 1px solid red ;
     width: 250px;
     background-color: purple;
+    flex: auto;
 }
 
 main{
-    border: 1px solid blue;
-    position: relative;
-}
-
-header{
-    border: 1px solid red ;
-    
+    display: flex;
 }
 
 article{
-    border: 1px solid red ;
-    position: absolute;
     color: tomato;
     font-weight: bold;
-}
-
-header,section,article{
-    align-self: flex-start;
+    margin: 100px 150px 50px;
+    
 }
 
 a, p{
@@ -88,17 +90,54 @@ li{
 }
 a{
     text-transform: uppercase;
+    background-color: purple;
 }
 
-article div::before {
-    content: "***";
+#welcome div::before {
+    content: "*";
     color: red;
 }
-article div::after {
-    content: "***";
+#welcome div::after {
+    content: "*";
     color: red;
 }
 
 ul{
     list-style-type: none;
+}
+
+
+.offer{
+    align-items: stretch;
+    background-color: #fce9fc;
+    flex: 70%;
+    
+}
+
+.offer h1{
+    float: left;
+    margin-left: 50px;
+}
+
+.offer article{
+    margin-left: 10px;
+}
+
+#branch_form .horizontal-center{
+    margin: 10px 10px 30px 40px;
+}
+
+.barnch_footer{
+   
+    margin-left: 40px;
+}
+
+.text-left{
+    margin-left: 20px;
+    
+}
+
+.error{
+    float: right;
+    color: red;
 }
