@@ -143,39 +143,47 @@
         </title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <div>
-            <h1 class = "text-center">
-                <?php echo $app_name; ?>
-            </h1>
-
+    <body id = "edit_branch">
+    <main>
+        <section>
             <p>Hi Admin!</p>
             <br>
 
             <div>
                 <?php include "sidebar.php"; ?>
             </div>
+            </section>
+        <section class="offer">
+            <header>
+            <h1 class = "text-center">
+                <?php echo $app_name; ?>
+            </h1>
 
-            <div>
-                <h3>Edit Branch Details</h3>
-                <form action="" method="POST">
-                    <div>
-                        <table>
+            </header>
+            <br><br><br>
+           
+                <h3 class="text-left">Edit Branch Details</h3>
+                <article id="branch">
+                <form action="" method="POST" id="branch_form">
+                    <div >
+                        <table class = "edit_table">
                             <tr>
-                                <th>Branch Name</th>
-                                <th>Branch Address</th>
+                                <th style = "color: black">Branch Name</th>
+                                <th style = "color: black">Branch Address</th>
                             </tr>
                             <tr>
                                 <td>
                                     <input type="text" id = "branch-name" name = "branch_name" value = "<?php echo $old_branch_details["Branch_Name"]; ?>" placeholder = "Enter new branch name" required>
                                 </td>
                                 <td>
+                                <textarea id="w3review" name="w3review" rows="4" cols="50">
                                     <input type="text" id = "branch-address" name = "branch_address" value = "<?php echo $old_branch_details["Branch_Address"]; ?>" placeholder = "Enter new branch address" required>
+                                </textarea>
                                 </td>
                             </tr>
                             <tr>
-                                <th>Branch Manager</th>
-                                <th>Branch Rank</th>
+                                <th style = "color: black">Branch Manager</th>
+                                <th style = "color: black">Branch Rank</th>
                             </tr>
                             <tr>
                                 <td>
@@ -186,8 +194,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>Staff count</th>
-                                <th>Customer count</th>
+                                <th style = "color: black">Staff count</th>
+                                <th style = "color: black">Customer count</th>
                             </tr>
                             <tr>
                                 <td>
@@ -200,7 +208,7 @@
                         </table>
                     </div>
                     <br>
-                    <div>
+                    <div class = "footer">
                         <button type="submit" id = "btn-save" name = "btn_save">Save</button>
                         <button type="reset" id = "btn-reset" name = "btn_reset">Reset</button>
                     </div>

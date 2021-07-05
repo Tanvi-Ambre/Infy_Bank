@@ -92,7 +92,7 @@ if (isset($_POST["btn_save"])) {
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body  id = "edit_branch">
     <main>
         <section>
             <p>Hi Admin!</p>
@@ -116,11 +116,11 @@ if (isset($_POST["btn_save"])) {
 
             <article id="branch">
                 <form action="" method="POST" id="branch_form">
-                    <div class="horizontal-center">
-                        <table>
+                    <div >
+                        <table class = "edit_table">
                             <tr>
-                                <th>Card Name</th>
-                                <th>Minimum Limit</th>
+                                <th style = "color: black">Card Name</th>
+                                <th style = "color: black">Minimum Limit</th>
                             </tr>
                             <tr>
                                 <td>
@@ -131,8 +131,8 @@ if (isset($_POST["btn_save"])) {
                                 </td>
                             </tr>
                             <tr>
-                                <th>Maximum Limit</th>
-                                <th>Annual Income Eligibility</th>
+                                <th style = "color: black">Maximum Limit</th>
+                                <th style = "color: black">Annual Income Eligibility</th>
                             </tr>
                             <tr>
                                 <td>

@@ -110,28 +110,34 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>
-            <h1 class = "text-center">
-                <?php echo $app_name; ?>
-            </h1>
-
+    <main>
+        <section>
             <p>Hi Admin!</p>
             <br>
 
             <div>
                 <?php include "sidebar.php"; ?>
             </div>
+            </section>
+        <section class= "offer">
+            <header>
+            <h1 class="text-left">
+                <?php echo $app_name; ?>
+            </h1>
+            </header>
+            <br><br><br>
+<article id="branch">
 
-            <h3 class = "text-center">
+            <h3 class = "text-left">
                 Change Password
             </h3>
 
             <div>
-                <form action="" method="POST">
+                <form action="" method="POST" id="branch_form">
                     <div>
                         <table>
                             <tr>
-                                <td>
+                                <td style = "color: black">
                                     Old Login Password
                                 </td>
                                 <td>
@@ -139,7 +145,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td style = "color: black">
                                     New Login Password
                                 </td>
                                 <td>
@@ -147,7 +153,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td style = "color: black">
                                     Confirm New Login Password
                                 </td>
                                 <td>
@@ -157,13 +163,13 @@
                         </table>
                     </div>
                     <br>
-                    <div>
+                    <div class="barnch_footer">
                         <button type="submit" id = "btn-submit" name = "btn_submit">Submit</button>
                         <button type="reset" id = "btn-reset" name = "btn_reset">Reset</button>
                     </div>
                 </form>
             </div>
-            <div>
+            <div class = "error">
                 <?php if(!empty($error_messages)): ?>
                     <?php foreach($error_messages as $message): ?>
                         <div>

@@ -99,27 +99,33 @@
         </title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <div>
-            <h1 class = "text-center">
-                <?php echo $app_name; ?>
-            </h1>
-
+    <body id = "edit_branch">
+    <main>
+        <section>
             <p>Hi Admin!</p>
             <br>
 
             <div>
                 <?php include "sidebar.php"; ?>
             </div>
+            </section>
+        <section class="offer">
+            <header>
+            <h1 class = "text-center">
+                <?php echo $app_name; ?>
+            </h1>
 
-            <div>
-                <h3>Edit Offer Details</h3>
+            </header>
+            <br><br><br>
+            <h3 class="text-left">Edit Offer Details</h3>
+           
+            <article id="branch">
 
-                <form action="" method="POST">
+                <form action="" method="POST" id="branch_form">
                     <div>
-                        <table>
+                        <table class = "edit_table">
                             <tr>
-                                <th>
+                                <th style = "color: black">
                                     Offer Name
                                 </th>
                             </tr>
@@ -129,7 +135,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>
+                                <th style = "color: black">
                                     Offer Details
                                 </th>
                             </tr>
@@ -141,13 +147,13 @@
                         </table>
                     </div>
                     <br>
-                    <div>
+                    <div class = "footer">
                         <button type="submit" id = "btn-save" name = "btn_save">Save</button>
                         <button type="reset" id = "btn-reset" name = "btn_reset">Reset</button>
                     </div>
                 </form>
             </div>
-            <div>
+            <div class = "error">
                 <?php if(!empty($error_messages)): ?>
                     <?php foreach($error_messages as $message): ?>
                         <div>

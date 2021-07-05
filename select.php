@@ -62,26 +62,32 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>
-            <h1 class = "text-center">
-                <?php echo $app_name; ?>
-            </h1>
-
+    <main>
+        <section>
             <p>Hi Admin!</p>
             <br>
 
             <div>
                 <?php include "sidebar.php"; ?>
             </div>
+            </section>
+        <section class= "offer">
+            <header>
+            <h1 class = "text-center">
+                <?php echo $app_name; ?>
+            </h1>
+            </header>
+            <br><br><br>
+<article id="branch">
 
             <?php if(strcmp($edit_type, "branch") == 0): ?>
-                <h3 class = "text-center">
+                <h3 class = "text-left">
                     Select branch to edit
                 </h3>
                 <table>
                     <tr>
-                        <th>Branch Name</th>
-                        <th>Branch Address</th>
+                        <th style = "color: black">Branch Name</th>
+                        <th style = "color: black">Branch Address</th>
                     </tr>
                     <?php foreach($show_branches as $branch): ?>
                         <tr>
@@ -90,7 +96,7 @@
                                     <?php echo $branch["Branch_Name"]; ?>
                                 <?php echo "</a>"; ?>
                             </td>
-                            <td>
+                            <td style = "color: black">
                                 <?php echo $branch["Branch_Address"]; ?>
                             </td>
                         </tr>

@@ -141,3 +141,22 @@ ul{
     float: right;
     color: red;
 }
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+  table{
+      margin: 20px;
+      border: 3px solid purple;
+      
+  }
+
+  .edit_table{
+      margin-right:10px;
+      
+  }
+
+  #edit_branch{
+      margin: 30px 50px;
+  }
